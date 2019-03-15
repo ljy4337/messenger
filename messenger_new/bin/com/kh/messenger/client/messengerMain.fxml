@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="400.0" prefWidth="300.0"
+	xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.kh.messenger.client.MessengerMainController">
+	<top>
+		<VBox prefWidth="300.0" BorderPane.alignment="CENTER">
+			<children>
+				<MenuBar>
+
+					<menus>
+						<Menu mnemonicParsing="false" text="메뉴">
+							<items>
+								<MenuItem mnemonicParsing="false"
+									onAction="#handleMessengerExit" text="로그아웃">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="Q"
+											control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+
+									</accelerator>
+								</MenuItem>
+								<MenuItem mnemonicParsing="false"
+									onAction="#messengerExit" text="종료">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="X"
+											control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+
+									</accelerator>
+								</MenuItem>
+
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="친구">
+							<items>
+								<Menu mnemonicParsing="false" text="친구추가">
+									<items>
+										<MenuItem fx:id="add1" mnemonicParsing="false"
+											onAction="#addFreind1" text="아이디로 친구추가" />
+										<MenuItem mnemonicParsing="false" text="전화번호로 친구추가" />
+										<MenuItem mnemonicParsing="false" text="닉네임으로 친구추가" />
+									</items>
+								</Menu>
+								<MenuItem mnemonicParsing="false"
+									onAction="#handleAddFriend" text="친구등록">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="N"
+											control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+									</accelerator>
+									<graphic>
+										<ImageView>
+											<image>
+												<Image preserveRatio="false" requestedHeight="20"
+													requestedWidth="20" smooth="true" url="@images/add.jpg" />
+											</image>
+										</ImageView>
+									</graphic>
+								</MenuItem>
+								<MenuItem mnemonicParsing="false" text="친구삭제" />
+
+
+
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="내정보">
+							<items>
+								<MenuItem mnemonicParsing="false" text="회원정보수정" />
+
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Help">
+							<items>
+								<MenuItem mnemonicParsing="false" text="About" />
+							</items>
+						</Menu>
+					</menus>
+				</MenuBar>
+
+
+				<ToolBar prefHeight="42.0" prefWidth="23.0">
+					<items>
+						<Button mnemonicParsing="false" text="친구추가" />
+						<Button mnemonicParsing="false" prefHeight="23">
+							<graphic>
+								<ImageView>
+									<image>
+										<Image preserveRatio="false" requestedHeight="20"
+											requestedWidth="20" smooth="true" url="@images/add.jpg" />
+									</image>
+								</ImageView>
+							</graphic>
+						</Button>
+						<Button fx:id="logout" mnemonicParsing="false"
+							onMouseClicked="#handleMessengerExit" prefHeight="23" text="로그아웃" />
+					</items>
+				</ToolBar>
+
+
+
+			</children>
+
+		</VBox>
+	</top>
+	<center>
+
+		<TreeView fx:id="tree" prefHeight="200.0" prefWidth="200.0"
+			BorderPane.alignment="CENTER" />
+
+	</center>
+
+	<bottom>
+		<HBox prefHeight="49.0" prefWidth="300.0"
+			BorderPane.alignment="CENTER" />
+	</bottom>
+</BorderPane>

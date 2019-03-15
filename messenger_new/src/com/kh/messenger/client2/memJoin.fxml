@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0"
+	prefWidth="431.0" xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.kh.messenger.client2.MemberJoinController">
+	<center>
+		<GridPane alignment="CENTER" prefHeight="442.0"
+			prefWidth="431.0" BorderPane.alignment="CENTER">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES"
+					maxWidth="144.0" minWidth="10.0" prefWidth="91.0" />
+				<ColumnConstraints hgrow="SOMETIMES"
+					maxWidth="268.0" minWidth="10.0" prefWidth="268.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints />
+				<RowConstraints maxHeight="136.0" minHeight="0.0"
+					prefHeight="1.0" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="339.0" minHeight="0.0"
+					prefHeight="1.0" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="386.0" minHeight="10.0"
+					prefHeight="1.0" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="386.0" minHeight="10.0"
+					prefHeight="1.0" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="386.0" minHeight="10.0"
+					prefHeight="1.0" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="386.0" minHeight="10.0"
+					prefHeight="1.0" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="386.0" minHeight="10.0"
+					prefHeight="1.0" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="386.0" minHeight="10.0"
+					prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="386.0" minHeight="10.0"
+					prefHeight="30.0" vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<Label text="*아이디 " GridPane.rowIndex="1">
+					<GridPane.margin>
+						<Insets left="10.0" />
+					</GridPane.margin>
+				</Label>
+				<Label text="*비밀번호" GridPane.rowIndex="2">
+					<GridPane.margin>
+						<Insets left="10.0" />
+					</GridPane.margin>
+				</Label>
+				<Label text="*비밀번호확인" GridPane.rowIndex="3">
+					<GridPane.margin>
+						<Insets left="10.0" />
+					</GridPane.margin>
+				</Label>
+				<Label text="*닉네임" GridPane.rowIndex="4">
+					<GridPane.margin>
+						<Insets left="10.0" />
+					</GridPane.margin>
+				</Label>
+				<Label contentDisplay="CENTER" text="*전화번호"
+					GridPane.rowIndex="5">
+					<padding>
+						<Insets left="10.0" />
+					</padding>
+				</Label>
+				<Label text="성별" GridPane.rowIndex="6">
+					<GridPane.margin>
+						<Insets left="10.0" />
+					</GridPane.margin>
+				</Label>
+				<Label text="지역" GridPane.rowIndex="7">
+					<GridPane.margin>
+						<Insets left="10.0" />
+					</GridPane.margin>
+				</Label>
+				<Label text="*생년월일" GridPane.rowIndex="8">
+					<GridPane.margin>
+						<Insets left="10.0" />
+					</GridPane.margin>
+				</Label>
+				<VBox alignment="CENTER" prefHeight="43.0" prefWidth="247.0"
+					GridPane.columnIndex="1" GridPane.rowIndex="1">
+					<children>
+						<HBox alignment="CENTER" prefHeight="100.0" prefWidth="250.0">
+							<children>
+								<TextField fx:id="id" alignment="TOP_LEFT"
+									minWidth="214.0" prefHeight="23.0" prefWidth="250.0"
+									promptText="아이디를 입력하세요(abc@abcd.com)." />
+							</children>
+						</HBox>
+						<Label fx:id="idlabel" />
+					</children>
+				</VBox>
+				<VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0"
+					GridPane.columnIndex="1" GridPane.rowIndex="2">
+					<children>
+						<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+							<children>
+								<PasswordField fx:id="pw" prefHeight="23.0"
+									prefWidth="250.0" />
+							</children>
+						</HBox>
+						<Label fx:id="pwlabel" />
+					</children>
+				</VBox>
+				<VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0"
+					GridPane.columnIndex="1" GridPane.rowIndex="3">
+					<children>
+						<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+							<children>
+								<PasswordField fx:id="pwcheck" prefWidth="250.0" />
+							</children>
+						</HBox>
+						<Label fx:id="pwlabel2" />
+					</children>
+				</VBox>
+				<VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0"
+					GridPane.columnIndex="1" GridPane.rowIndex="4">
+					<children>
+						<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+							<children>
+								<TextField fx:id="nickName" prefWidth="250.0"
+									promptText="닉네임을 입력하세요." />
+							</children>
+						</HBox>
+						<Label fx:id="nicklabel" />
+					</children>
+				</VBox>
+				<VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0"
+					GridPane.columnIndex="1" GridPane.rowIndex="5">
+					<children>
+						<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+							<children>
+								<TextField fx:id="tel" prefHeight="23.0"
+									prefWidth="250.0" promptText="전화번호 13자리를 입력하세요.(-포함)" />
+							</children>
+						</HBox>
+						<Label fx:id="tellabel" />
+					</children>
+				</VBox>
+				<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+					spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+					<fx:define>
+						<ToggleGroup fx:id="sex" />
+					</fx:define>
+					<children>
+						<RadioButton fx:id="sex1" contentDisplay="CENTER"
+							mnemonicParsing="false" text="남자" userData="남">
+							<toggleGroup>
+								<ToggleGroup fx:id="sex" />
+							</toggleGroup>
+						</RadioButton>
+						<RadioButton fx:id="sex2" contentDisplay="CENTER"
+							mnemonicParsing="false" text="여자" toggleGroup="$sex" userData="여" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+					GridPane.columnIndex="1" GridPane.rowIndex="7">
+					<children>
+						<ComboBox fx:id="region" prefWidth="210.0"
+							promptText="지역">
+							<items>
+								<FXCollections fx:factory="observableArrayList">
+									<String fx:value="서울" />
+									<String fx:value="경기" />
+									<String fx:value="대전" />
+									<String fx:value="대구" />
+									<String fx:value="부산" />
+									<String fx:value="울산" />
+									<String fx:value="강원" />
+									<String fx:value="경남" />
+									<String fx:value="경북" />
+									<String fx:value="전남" />
+									<String fx:value="전북" />
+									<String fx:value="충남" />
+									<String fx:value="충북" />
+									<String fx:value="제주" />
+								</FXCollections>
+							</items>
+
+
+						</ComboBox>
+					</children>
+				</HBox>
+				<VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0"
+					GridPane.columnIndex="1" GridPane.rowIndex="8">
+					<children>
+						<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+							<children>
+								<DatePicker fx:id="birth" prefWidth="230.0" />
+							</children>
+						</HBox>
+						<Label fx:id="birthlabel" />
+					</children>
+				</VBox>
+			</children>
+		</GridPane>
+	</center>
+	<bottom>
+		<HBox alignment="CENTER" prefHeight="63.0" prefWidth="431.0"
+			spacing="10.0" BorderPane.alignment="CENTER">
+			<children>
+				<Button fx:id="join" mnemonicParsing="false"
+					onMouseClicked="#memberJoin" text="가입" textAlignment="CENTER" />
+				<Button fx:id="exit" mnemonicParsing="false"
+					onMouseClicked="#memberCancle" text="취소" textAlignment="CENTER" />
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</HBox>
+	</bottom>
+	<top>
+		<HBox alignment="CENTER" prefHeight="68.0" prefWidth="322.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<Label text="[회 원 가 입]">
+					<font>
+						<Font size="28.0" />
+					</font>
+				</Label>
+			</children>
+		</HBox>
+	</top>
+</BorderPane>

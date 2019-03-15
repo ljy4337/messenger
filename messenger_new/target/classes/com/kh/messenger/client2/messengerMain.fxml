@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="450.0" prefWidth="464.0"
+	xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.kh.messenger.client2.MessengerMainController">
+	<top>
+		<VBox prefWidth="300.0" BorderPane.alignment="CENTER">
+			<children>
+				<MenuBar>
+
+					<menus>
+						<Menu mnemonicParsing="false" text="메뉴">
+							<items>
+								<MenuItem mnemonicParsing="false" onAction="#logOut"
+									text="로그아웃">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="Q"
+											control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+
+									</accelerator>
+								</MenuItem>
+								<MenuItem mnemonicParsing="false"
+									onAction="#messengerExit" text="종료">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="X"
+											control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+
+									</accelerator>
+								</MenuItem>
+
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="친구">
+							<items>
+								<MenuItem fx:id="add1" mnemonicParsing="false"
+									onAction="#handleAddFriend" text="아이디로 친구추가" />
+								<MenuItem mnemonicParsing="false"
+									onAction="#handleDelFreind" text="친구삭제" />
+
+
+
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="내정보">
+							<items>
+								<MenuItem fx:id="memberout" mnemonicParsing="false"
+									onAction="#out" text="탈퇴" />
+
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Help">
+							<items>
+								<MenuItem mnemonicParsing="false" text="About" />
+							</items>
+						</Menu>
+					</menus>
+				</MenuBar>
+
+
+				<ToolBar prefHeight="33.0" prefWidth="198.0">
+					<items>
+						<HBox alignment="CENTER_RIGHT" prefHeight="0.0"
+							prefWidth="446.0" spacing="10.0">
+							<children>
+								<Button mnemonicParsing="false" text="친구추가" />
+								<Button fx:id="logoutbutton" mnemonicParsing="false"
+									onMouseClicked="#logOut" prefHeight="23" text="로그아웃" />
+								<Button mnemonicParsing="false"
+									onMouseClicked="#messengerExit" prefHeight="23" text="종료" />
+							</children>
+						</HBox>
+					</items>
+				</ToolBar>
+
+
+
+			</children>
+
+		</VBox>
+	</top>
+	<center>
+		<TabPane BorderPane.alignment="CENTER">
+			<tabs>
+				<Tab closable="false" text="친구들">
+					<content>
+						<TreeTableView fx:id="ttv" prefHeight="305.0"
+							prefWidth="375.0">
+							<columns>
+								<TreeTableColumn fx:id="ttcnickname"
+									prefWidth="85.0" resizable="false" text="별칭" />
+								<TreeTableColumn fx:id="ttcemail"
+									prefWidth="113.0" resizable="false" text="이메일" />
+								<TreeTableColumn fx:id="ttcregion"
+									prefWidth="51.0" resizable="false" text="지역" />
+								<TreeTableColumn fx:id="ttcgender"
+									prefWidth="39.0" resizable="false" text="성별" />
+								<TreeTableColumn fx:id="ttctel"
+									prefWidth="126.0" resizable="false" text="연락처" />
+								<TreeTableColumn fx:id="ttcage" prefWidth="50.0"
+									resizable="false" text="나이" />
+							</columns>
+							<contextMenu>
+								<ContextMenu>
+									<items>
+										<MenuItem mnemonicParsing="false"
+											onAction="#handleAddFriend" text="친구추가" />
+										<MenuItem mnemonicParsing="false"
+											onAction="#handleDelFreind" text="친구삭제" />
+									</items>
+								</ContextMenu>
+							</contextMenu>
+						</TreeTableView>
+					</content>
+
+				</Tab>
+				<Tab closable="false" text="내쪽지">
+					<content>
+						<TreeTableView prefHeight="200.0" prefWidth="200.0">
+							<columns>
+								<TreeTableColumn prefWidth="75.0" text="별칭" />
+								<TreeTableColumn prefWidth="75.0" text="이메일" />
+								<TreeTableColumn prefWidth="75.0" text="지역" />
+								<TreeTableColumn prefWidth="75.0" text="성별" />
+								<TreeTableColumn prefWidth="75.0" text="연락처" />
+							</columns>
+							<contextMenu>
+								<ContextMenu>
+									<items>
+										<MenuItem mnemonicParsing="false" text="친구추가" />
+										<MenuItem mnemonicParsing="false" text="친구삭제" />
+									</items>
+								</ContextMenu>
+							</contextMenu>
+						</TreeTableView>
+					</content>
+
+				</Tab>
+
+			</tabs>
+		</TabPane>
+	</center>
+	<bottom>
+		<HBox alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="464.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<Label fx:id="id2" />
+			</children>
+		</HBox>
+	</bottom>
+</BorderPane>
